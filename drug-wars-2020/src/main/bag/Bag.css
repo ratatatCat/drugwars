@@ -1,0 +1,10 @@
+.Bag {
+  display: block;
+}
+
+button {
+  color: white;
+  background: #098A93;
+  width: 200px;
+  height: 30px;
+}

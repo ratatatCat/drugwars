@@ -7,15 +7,32 @@ npm start</code>
 
 ## To Do
 1. Base App Components
-    * Main App
-    * Price component
-    * Event popup
-    * Action section
+    * Intro Page - FINISHED
+    * Main app - FINISHED
+    * Status area - FINISHED
+    * Price list - FINISHED
+    * Travel component - FINISHED
+    * Bag list - FINISHED
+    * Event popup - FINISHED
+    * Action section - FINISHED
 2. CSS
-3. Functionality
+3. Add database
+4. Functionality
+    * New Game
     * Buy drugs
     * Sell drugs
+    * Trigger Random Events
+    * Travel
+    * Bag
+    * Price changes
+    * Actions
+    * Fight Options
+    * Save Game
+    * Continue Game
+    * Incorporate Legal Weed in Illinois and Colorado Locations
+    * Switch Travel to Map
     * Multiplayer actions
-3. Cleanup
+5. Cleanup
     * Move code to separate components
-4. Online Multiplayer capabilities
+    * Add unit tests
+6. Online Multiplayer capabilities

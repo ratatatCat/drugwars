@@ -1,22 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import Intro from './intro/Intro';
-import Main from './main/Main';
-
-function Index(props) {
-  const isIntro = props.isIntro;
-
-  if (isIntro) {
-    return <Intro />
-  }
-  return <Main />
-}
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "./index.css";
+import Intro from "./intro/Intro";
+import Main from "./main/Main";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <header className="Intro-header">Drug Wars 2020</header>
-    <Index isIntro={true} />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Intro} />
+        <Route path="/main" component={Main} />
+      </Switch>
+    </Router>
+  </div>,
+  document.getElementById("root")
 );

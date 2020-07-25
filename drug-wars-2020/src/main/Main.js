@@ -1,11 +1,27 @@
-import React from 'react';
-import './Main.css';
-import Status from './status/Status'
+import React from "react";
+import "./Main.css";
+import Status from "./status/Status";
+import Travel from "./travel/Travel";
+import Events from "./events/Events";
+import Drugs from "./drugs/Drugs";
+import Actions from "./actions/Actions";
+import Bag from "./bag/Bag";
 
 function Main() {
   return (
     <div className="Main">
-      <Status />
+      <div className="Section">
+        <Status className="Action" />
+        <Travel className="Action" />
+      </div>
+      <div className="Section">
+        <Events />
+      </div>
+      <div className="Section">
+        <Drugs className="Action" />
+        <Actions className="Action" />
+        <Bag className="Action" />
+      </div>
     </div>
   );
 }

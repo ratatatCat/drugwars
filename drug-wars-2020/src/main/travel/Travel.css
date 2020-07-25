@@ -1,0 +1,11 @@
+.Travel {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  color: white;
+  background: #098a93;
+  width: 200px;
+  height: 30px;
+}

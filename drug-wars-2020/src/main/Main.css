@@ -2,9 +2,17 @@
   display: block;
 }
 
+.Section {
+  display: flex;
+}
+
+.Action {
+  flex: 1;
+}
+
 button {
   color: white;
-  background: #098A93;
+  background: #098a93;
   width: 200px;
   height: 30px;
 }

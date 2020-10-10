@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import "./Drugs.css";
+import "./Knockoffs.css";
 
-function Drugs() {
+function Knockoffs() {
   return (
-    <div className="Drugs">
-      <h3>Available Drugs:</h3>
+    <div className="vendors">
+      <h3>Available Vendors:</h3>
       <table>
         <tbody>
           <tr>
             <th />
-            <th>Drug</th>
+            <th>Vendor</th>
             <th>Price</th>
           </tr>
           <tr>
@@ -73,4 +73,4 @@ function Drugs() {
   );
 }
 
-export default Drugs;
+export default Knockoffs;

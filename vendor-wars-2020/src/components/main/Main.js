@@ -3,7 +3,7 @@ import "./Main.css";
 import Status from "./status/Status";
 import Travel from "./travel/Travel";
 import Events from "./events/Events";
-import Drugs from "./drugs/Drugs";
+import Knockoffs from "./knockoffs/Knockoffs";
 import Actions from "./actions/Actions";
 import Bag from "./bag/Bag";
 
@@ -18,7 +18,7 @@ function Main() {
         <Events />
       </div>
       <div className="Section">
-        <Drugs className="Action" />
+        <Knockoffs className="Action" />
         <Actions className="Action" />
         <Bag className="Action" />
       </div>

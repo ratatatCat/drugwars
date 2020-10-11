@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Status from './Status/status';
 import { Travel, CurrentLoc } from './Travel/travel';
-import Events from './events/Events';
+import Events from './Events/events';
 import Knockoffs from './knockoffs/Knockoffs';
 import Actions from './actions/Actions';
 import Bag from './bag/Bag';
@@ -23,12 +23,6 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
   },
-  small: {
-    flex: '1',
-  },
-  large: {
-    flex: '3',
-  },
 }));
 
 function Main(props) {
@@ -44,7 +38,7 @@ function Main(props) {
         <CurrentLoc location={location} src={src} />
         <Travel setLocation={setLocation} setSrc={setSrc} />
       </div>
-      <div>
+      <div className={classes.section}>
         <Events />
       </div>
       <div>

@@ -1,17 +1,18 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
 import "./home.css";
+import { Link } from 'react-router-dom';
+import * as ROUTES from '../../constants/routes';
 
 import { compose } from 'recompose';
 
 import { withAuthorization } from '../auth/Session';
 
 function HomePage() {
-  let history = useHistory();
-
   return (
     <div className="Intro">
-      <button onClick={() => history.push("/main")}>New Game</button>
+      <Link to={ROUTES.MAIN}>
+        <button>New Game</button>
+      </Link>
       <button>Continue</button>
     </div>
   );

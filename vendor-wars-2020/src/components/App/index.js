@@ -5,6 +5,7 @@ import { Redirect } from 'react-router';
 import SignUpPage from '../auth/SignUp';
 import SignInPage from '../auth/SignIn';
 import PasswordForgetPage from '../auth/PasswordForget';
+import Main from '../Main/main';
 import { withAuthentication, AuthUserContext } from '../auth/Session';
 import { Link } from 'react-router-dom';
 
@@ -36,6 +37,7 @@ const App = () => (
         component={PasswordForgetPage}
       />
       <Route path={ROUTES.HOME} component={HomePage} />
+      <Route path={ROUTES.MAIN} component={Main} />
     </div>
   </Router>
 );

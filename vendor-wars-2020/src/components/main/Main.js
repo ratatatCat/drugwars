@@ -1,5 +1,5 @@
 import React from "react";
-import "./Main.css";
+import "./main.css";
 import Status from "./status/Status";
 import Travel from "./travel/Travel";
 import Events from "./events/Events";

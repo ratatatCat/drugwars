@@ -10,7 +10,7 @@ import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import { Icon } from '@material-ui/core';
-import VendorMan from '../../vendor_man.svg';
+import VendorMan from '../../images/vendor_man.svg';
 
 import { useTheme, makeStyles } from '@material-ui/core/styles';
 

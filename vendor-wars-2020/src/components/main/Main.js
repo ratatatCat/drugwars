@@ -35,13 +35,14 @@ function Main(props) {
   const classes = useStyles(props);
   const theme = useTheme();
   const [location, setLocation] = useState();
+  const [src, setSrc] = useState();
 
   return (
     <Container component="main" maxWidth="lg">
       <div className={classes.section}>
         <Status />
-        <CurrentLoc location={location} />
-        <Travel setLocation={setLocation} />
+        <CurrentLoc location={location} src={src} />
+        <Travel setLocation={setLocation} setSrc={setSrc} />
       </div>
       <div>
         <Events />

@@ -4,6 +4,15 @@ import { useTheme, makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import LocalTaxiIcon from '@material-ui/icons/LocalTaxi';
 
+import Northtown from '../../../images/northtown.jpg';
+import Plaza from '../../../images/plaza.jpg';
+import Downtown from '../../../images/downtown.jpg';
+import Westport from '../../../images/westport.jfif';
+import Brookside from '../../../images/brookside.jpg';
+import MartinCity from '../../../images/martincity.jpg';
+import Independence from '../../../images/independence.jpg';
+import JOCO from '../../../images/joco.jpg';
+
 const useStyles = makeStyles((theme) => ({
   buttonPrimary: {
     color: theme.palette.primary.main,
@@ -21,8 +30,15 @@ const useStyles = makeStyles((theme) => ({
     flex: '1',
     textAlign: 'center',
   },
+  hidden: {
+    display: 'none',
+  },
   icon: {
     marginRight: '5px',
+  },
+  photo: {
+    height: '200px',
+    width: '200px',
   },
   travel: {
     display: 'flex',
@@ -31,8 +47,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function onClick(button, props) {
+function onClick(button, props, src) {
   props.setLocation(button.target.valueOf().innerText);
+  props.setSrc(src);
 }
 
 function CurrentLoc(props) {
@@ -43,7 +60,11 @@ function CurrentLoc(props) {
     <div className={classes.currentLoc}>
       <h1>Kansas City, MO</h1>
       <h2>{props.location}</h2>
-      <h2>Picture of Place Here</h2>
+      <img
+        className={!!props.src ? classes.photo : classes.hidden}
+        src={props.src}
+        alt={props.location}
+      />
     </div>
   );
 }
@@ -62,7 +83,7 @@ function Travel(props) {
             variant="contained"
             className={classes.buttonPrimary}
             onClick={(button) => {
-              onClick(button, props);
+              onClick(button, props, Northtown);
             }}
           >
             <LocalTaxiIcon className={classes.icon} />
@@ -72,7 +93,7 @@ function Travel(props) {
             variant="contained"
             className={classes.buttonSecondary}
             onClick={(button) => {
-              onClick(button, props);
+              onClick(button, props, Plaza);
             }}
           >
             <LocalTaxiIcon className={classes.icon} />
@@ -82,7 +103,7 @@ function Travel(props) {
             variant="contained"
             className={classes.buttonPrimary}
             onClick={(button) => {
-              onClick(button, props);
+              onClick(button, props, Downtown);
             }}
           >
             <LocalTaxiIcon className={classes.icon} />
@@ -92,7 +113,7 @@ function Travel(props) {
             variant="contained"
             className={classes.buttonSecondary}
             onClick={(button) => {
-              onClick(button, props);
+              onClick(button, props, Westport);
             }}
           >
             <LocalTaxiIcon className={classes.icon} />
@@ -105,7 +126,7 @@ function Travel(props) {
             variant="contained"
             className={classes.buttonSecondary}
             onClick={(button) => {
-              onClick(button, props);
+              onClick(button, props, Brookside);
             }}
           >
             <LocalTaxiIcon className={classes.icon} />
@@ -115,7 +136,7 @@ function Travel(props) {
             variant="contained"
             className={classes.buttonPrimary}
             onClick={(button) => {
-              onClick(button, props);
+              onClick(button, props, MartinCity);
             }}
           >
             <LocalTaxiIcon className={classes.icon} />
@@ -125,7 +146,7 @@ function Travel(props) {
             variant="contained"
             className={classes.buttonSecondary}
             onClick={(button) => {
-              onClick(button, props);
+              onClick(button, props, Independence);
             }}
           >
             <LocalTaxiIcon className={classes.icon} />
@@ -135,7 +156,7 @@ function Travel(props) {
             variant="contained"
             className={classes.buttonPrimary}
             onClick={(button) => {
-              onClick(button, props);
+              onClick(button, props, JOCO);
             }}
           >
             <LocalTaxiIcon className={classes.icon} />

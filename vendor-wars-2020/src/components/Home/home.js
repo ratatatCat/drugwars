@@ -12,11 +12,7 @@ import Container from '@material-ui/core/Container';
 import { Icon } from '@material-ui/core';
 import VendorMan from '../../vendor_man.svg';
 
-import {
-  ThemeProvider,
-  useTheme,
-  makeStyles,
-} from '@material-ui/core/styles';
+import { useTheme, makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   button: {

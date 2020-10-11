@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 import { withFirebase } from '../../Firebase';
+import { withRouter, Link } from 'react-router-dom';
 import * as ROUTES from '../../../constants/routes';
 
 import Button from '@material-ui/core/Button';
-import Link from '@material-ui/core/Link';
 
 const PasswordForgetPage = () => (
   <div>
@@ -69,7 +69,18 @@ class PasswordForgetFormBase extends Component {
 }
 
 const PasswordForgetLink = () => (
-  <Link to={ROUTES.PASSWORD_FORGET}> Forgot Password?</Link>
+  <Link
+    to={ROUTES.PASSWORD_FORGET}
+    style={{ textDecoration: 'none' }}
+  >
+    <Button
+      type="text"
+      color="primary"
+      style={{ justifyContent: 'left' }}
+    >
+      Forgot Password?
+    </Button>
+  </Link>
 );
 
 export default PasswordForgetPage;

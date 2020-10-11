@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { compose } from 'recompose';
 
 import { withFirebase } from '../../Firebase';
 import * as ROUTES from '../../../constants/routes';
 import * as ROLES from '../../../constants/roles';
 
-import Link from '@material-ui/core/Link';
+import Button from '@material-ui/core/Button';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
 
 const styles = (theme) => ({
   button: {
@@ -22,14 +26,10 @@ const styles = (theme) => ({
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
   },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-  },
 });
 
 const SignUpPage = () => (
   <div>
-    <h1>SignUp</h1>
     <SignUpForm />
   </div>
 );
@@ -121,56 +121,93 @@ class SignUpFormBase extends Component {
       username === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          name="username"
-          value={username}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Full Name"
-        />
-        <input
-          name="email"
-          value={email}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          name="passwordOne"
-          value={passwordOne}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Password"
-        />
-        <input
-          name="passwordTwo"
-          value={passwordTwo}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Confirm Password"
-        />
-        <label>
-          Admin:
-          <input
-            name="isAdmin"
-            type="checkbox"
-            checked={isAdmin}
-            onChange={this.onChangeCheckbox}
-          />
-        </label>
-        <button disabled={isInvalid} type="submit">
-          Sign Up
-        </button>
+      <Container component="main" maxWidth="xs">
+        <CssBaseline />
+        <div className={styles.paper}>
+          <Typography component="h1" variant="h5">
+            Sign Up
+          </Typography>
+          <form className={styles.form} noValidate>
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              id="username"
+              label="Full Name"
+              name="username"
+              autoComplete="username"
+              autoFocus
+              onChange={this.onChange}
+            />
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              id="email"
+              label="Email Address"
+              name="email"
+              autoComplete="email"
+              value={email}
+              autoFocus
+              onChange={this.onChange}
+            />
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              name="passwordOne"
+              label="Confirm Password"
+              type="password"
+              id="passwordOne"
+              value={passwordOne}
+              onChange={this.onChange}
+            />
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              name="passwordTwo"
+              label="Confirm Password"
+              type="password"
+              id="passwordTwo"
+              value={passwordTwo}
+              onChange={this.onChange}
+            />
 
-        {error && <p>{error.message}</p>}
-      </form>
+            <Button
+              type="submit"
+              variant="contained"
+              color="secondary"
+              className={styles.submit}
+              disabled={isInvalid}
+              fullWidth
+              type="submit"
+            >
+              {' '}
+              Sign Up
+            </Button>
+            {error && <p>{error.message}</p>}
+          </form>
+        </div>
+      </Container>
     );
   }
 }
 
 const SignUpLink = () => (
-  <Link to={ROUTES.SIGN_UP}>Account Sign Up</Link>
+  <Link to={ROUTES.SIGN_UP} style={{ textDecoration: 'none' }}>
+    <Button
+      type="text"
+      color="primary"
+      style={{ width: 'max-content', justifyContent: 'right' }}
+    >
+      Account Sign Up
+    </Button>
+  </Link>
 );
 
 const SignUpForm = compose(withRouter, withFirebase)(SignUpFormBase);

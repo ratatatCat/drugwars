@@ -42,7 +42,7 @@ class Firebase {
 
   doSendEmailVerification = () =>
     this.auth.currentUser.sendEmailVerification({
-      url: process.env.REACT_APP_CONFIRMATION_EMAIL_REDIRECT,
+      url: 'http://localhost:3000',
     });
 
   doPasswordUpdate = password =>

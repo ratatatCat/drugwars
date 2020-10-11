@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import "./Intro.css";
+import "./home.css";
 
-function Intro() {
+import { compose } from 'recompose';
+
+import { withAuthorization } from '../auth/Session';
+
+function HomePage() {
   let history = useHistory();
 
   return (
@@ -13,4 +17,8 @@ function Intro() {
   );
 }
 
-export default Intro;
+const condition = authUser => !!authUser;
+
+export default compose(
+  withAuthorization(condition),
+)(HomePage);

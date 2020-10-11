@@ -12,7 +12,7 @@ import SignOutButton from '../auth/SignOut';
 import * as ROUTES from '../../constants/routes';
 import * as ROLES from '../../constants/roles';
 
-import HomePage from '../Home';
+import HomePage from '../Home/home';
 
 const App = () => (
   <Router>

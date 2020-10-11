@@ -13,7 +13,6 @@ import TextField from '@material-ui/core/TextField';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
 const styles = (theme) => ({
@@ -85,18 +84,17 @@ class SignInFormBase extends Component {
   };
 
   render() {
-    const classes = styles;
     const { email, password, error } = this.state;
     const isInvalid = password === '' || email === '';
 
     return (
       <Container component="main" maxWidth="xs">
         <CssBaseline />
-        <div className={classes.paper}>
+        <div className={styles.paper}>
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <form className={classes.form} noValidate>
+          <form className={styles.form} noValidate>
             <TextField
               variant="outlined"
               margin="normal"
@@ -125,7 +123,7 @@ class SignInFormBase extends Component {
               type="submit"
               variant="contained"
               color="secondary"
-              className={classes.submit}
+              className={styles.submit}
               disabled={isInvalid}
               fullWidth
               type="submit"
@@ -137,7 +135,7 @@ class SignInFormBase extends Component {
               <Grid item xs={6}>
                 <PasswordForgetLink />
               </Grid>
-              <Grid item xs={6}>
+              <Grid item xs={6} align={'right'}>
                 <SignUpLink />
               </Grid>
             </Grid>

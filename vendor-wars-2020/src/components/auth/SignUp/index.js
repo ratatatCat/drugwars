@@ -6,8 +6,26 @@ import { withFirebase } from '../../Firebase';
 import * as ROUTES from '../../../constants/routes';
 import * as ROLES from '../../../constants/roles';
 
-import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
+
+const styles = (theme) => ({
+  button: {
+    margin: theme.spacing.unit,
+  },
+  paper: {
+    marginTop: theme.spacing(8),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  form: {
+    width: '100%', // Fix IE 11 issue.
+    marginTop: theme.spacing(1),
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+  },
+});
 
 const SignUpPage = () => (
   <div>
@@ -152,12 +170,7 @@ class SignUpFormBase extends Component {
 }
 
 const SignUpLink = () => (
-  <Link to={ROUTES.SIGN_UP}>
-    {' '}
-    <Button type="submit" color="primary" variant="text">
-      Account Sign Up
-    </Button>
-  </Link>
+  <Link to={ROUTES.SIGN_UP}>Account Sign Up</Link>
 );
 
 const SignUpForm = compose(withRouter, withFirebase)(SignUpFormBase);

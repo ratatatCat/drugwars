@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import Status from './Status/status';
 import { Travel, CurrentLoc } from './Travel/travel';
 import Events from './events/Events';
@@ -33,13 +34,14 @@ const useStyles = makeStyles((theme) => ({
 function Main(props) {
   const classes = useStyles(props);
   const theme = useTheme();
+  const [location, setLocation] = useState();
 
   return (
     <Container component="main" maxWidth="lg">
       <div className={classes.section}>
         <Status />
-        <CurrentLoc />
-        <Travel />
+        <CurrentLoc location={location} />
+        <Travel setLocation={setLocation} />
       </div>
       <div>
         <Events />

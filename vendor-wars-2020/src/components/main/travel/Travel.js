@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
   currentLoc: {
     flex: '1',
+    textAlign: 'center',
   },
   icon: {
     marginRight: '5px',
@@ -30,6 +31,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+function onClick(button, props) {
+  props.setLocation(button.target.valueOf().innerText);
+}
+
 function CurrentLoc(props) {
   const classes = useStyles(props);
   const theme = useTheme();
@@ -37,7 +42,8 @@ function CurrentLoc(props) {
   return (
     <div className={classes.currentLoc}>
       <h1>Kansas City, MO</h1>
-      <h2>Uber</h2>
+      <h2>{props.location}</h2>
+      <h2>Picture of Place Here</h2>
     </div>
   );
 }
@@ -55,6 +61,9 @@ function Travel(props) {
           <Button
             variant="contained"
             className={classes.buttonPrimary}
+            onClick={(button) => {
+              onClick(button, props);
+            }}
           >
             <LocalTaxiIcon className={classes.icon} />
             Northtown
@@ -62,6 +71,9 @@ function Travel(props) {
           <Button
             variant="contained"
             className={classes.buttonSecondary}
+            onClick={(button) => {
+              onClick(button, props);
+            }}
           >
             <LocalTaxiIcon className={classes.icon} />
             Plaza
@@ -69,6 +81,9 @@ function Travel(props) {
           <Button
             variant="contained"
             className={classes.buttonPrimary}
+            onClick={(button) => {
+              onClick(button, props);
+            }}
           >
             <LocalTaxiIcon className={classes.icon} />
             Downtown
@@ -76,6 +91,9 @@ function Travel(props) {
           <Button
             variant="contained"
             className={classes.buttonSecondary}
+            onClick={(button) => {
+              onClick(button, props);
+            }}
           >
             <LocalTaxiIcon className={classes.icon} />
             Westport
@@ -86,6 +104,9 @@ function Travel(props) {
           <Button
             variant="contained"
             className={classes.buttonSecondary}
+            onClick={(button) => {
+              onClick(button, props);
+            }}
           >
             <LocalTaxiIcon className={classes.icon} />
             Brookside
@@ -93,6 +114,9 @@ function Travel(props) {
           <Button
             variant="contained"
             className={classes.buttonPrimary}
+            onClick={(button) => {
+              onClick(button, props);
+            }}
           >
             <LocalTaxiIcon className={classes.icon} />
             Martin City
@@ -100,6 +124,9 @@ function Travel(props) {
           <Button
             variant="contained"
             className={classes.buttonSecondary}
+            onClick={(button) => {
+              onClick(button, props);
+            }}
           >
             <LocalTaxiIcon className={classes.icon} />
             Independence
@@ -107,6 +134,9 @@ function Travel(props) {
           <Button
             variant="contained"
             className={classes.buttonPrimary}
+            onClick={(button) => {
+              onClick(button, props);
+            }}
           >
             <LocalTaxiIcon className={classes.icon} />
             JOCO

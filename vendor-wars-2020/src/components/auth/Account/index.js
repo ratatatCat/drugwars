@@ -9,23 +9,13 @@ import { withFirebase } from '../Firebase';
 import { PasswordForgetForm } from '../PasswordForget';
 import PasswordChangeForm from '../PasswordChange';
 
+import { Button } from '@material-ui/core';
+
 const SIGN_IN_METHODS = [
   {
     id: 'password',
     provider: null,
-  },
-  {
-    id: 'google.com',
-    provider: 'googleProvider',
-  },
-  {
-    id: 'facebook.com',
-    provider: 'facebookProvider',
-  },
-  {
-    id: 'twitter.com',
-    provider: 'twitterProvider',
-  },
+  }
 ];
 
 const AccountPage = () => (
@@ -61,13 +51,6 @@ class LoginManagementBase extends Component {
       .then(activeSignInMethods =>
         this.setState({ activeSignInMethods, error: null }),
       )
-      .catch(error => this.setState({ error }));
-  };
-
-  onSocialLoginLink = provider => {
-    this.props.firebase.auth.currentUser
-      .linkWithPopup(this.props.firebase[provider])
-      .then(this.fetchSignInMethods)
       .catch(error => this.setState({ error }));
   };
 
@@ -140,20 +123,18 @@ const SocialLoginToggle = ({
   onUnlink,
 }) =>
   isEnabled ? (
-    <button
-      type="button"
+    <Button
       onClick={() => onUnlink(signInMethod.id)}
       disabled={onlyOneLeft}
     >
       Deactivate {signInMethod.id}
-    </button>
+    </Button>
   ) : (
-    <button
-      type="button"
+    <Button
       onClick={() => onLink(signInMethod.provider)}
     >
       Link {signInMethod.id}
-    </button>
+    </Button>
   );
 
 class DefaultLoginToggle extends Component {

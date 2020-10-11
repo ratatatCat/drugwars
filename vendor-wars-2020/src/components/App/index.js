@@ -15,31 +15,36 @@ import * as ROLES from '../../constants/roles';
 
 import HomePage from '../Home/home';
 
+import { ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import theme from '../../theme';
+
 const App = () => (
-  <Router>
-    <div>
+  <ThemeProvider theme={theme}>
+    <CssBaseline />
+    <Router>
+      <div>
         <AuthUserContext.Consumer>
-        {authUser =>
-          authUser ? (
-            <Redirect to={ROUTES.SIGN_IN} authUser={authUser} />
-          ) : (
-            <Redirect to={ROUTES.HOME} />
-          )
-        }
-      </AuthUserContext.Consumer>
+          {(authUser) =>
+            authUser ? (
+              <Redirect to={ROUTES.SIGN_IN} authUser={authUser} />
+            ) : (
+              <Redirect to={ROUTES.HOME} />
+            )
+          }
+        </AuthUserContext.Consumer>
 
-      <hr />
-
-      <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
-      <Route path={ROUTES.SIGN_IN} component={SignInPage} />
-      <Route
-        path={ROUTES.PASSWORD_FORGET}
-        component={PasswordForgetPage}
-      />
-      <Route path={ROUTES.HOME} component={HomePage} />
-      <Route path={ROUTES.MAIN} component={Main} />
-    </div>
-  </Router>
+        <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
+        <Route path={ROUTES.SIGN_IN} component={SignInPage} />
+        <Route
+          path={ROUTES.PASSWORD_FORGET}
+          component={PasswordForgetPage}
+        />
+        <Route path={ROUTES.HOME} component={HomePage} />
+        <Route path={ROUTES.MAIN} component={Main} />
+      </div>
+    </Router>
+  </ThemeProvider>
 );
 
 export default withAuthentication(App);

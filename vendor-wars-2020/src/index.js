@@ -1,19 +1,18 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "./index.css";
-import Intro from "./components/intro/Intro";
-import Main from "./components/main/Main";
-import * as ROUTES from "./constants/routes";
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import * as serviceWorker from './serviceWorker';
+
+import App from './components/App';
+import Firebase, { FirebaseContext } from './components/Firebase';
 
 ReactDOM.render(
   <div>
-    <Router>
-      <Switch>
-        <Route exact path={ROUTES.LANDING} component={Intro} />
-        <Route path="/main" component={Main} />
-      </Switch>
-    </Router>
+  <FirebaseContext.Provider value={new Firebase()}>
+    <App />
+  </FirebaseContext.Provider>,
   </div>,
   document.getElementById("root")
 );
+
+serviceWorker.unregister();

@@ -127,7 +127,11 @@ class SignUpFormBase extends Component {
           <Typography component="h1" variant="h5">
             Sign Up
           </Typography>
-          <form className={styles.form} noValidate>
+          <form
+            className={styles.form}
+            noValidate
+            onSubmit={this.onSubmit}
+          >
             <TextField
               variant="outlined"
               margin="normal"

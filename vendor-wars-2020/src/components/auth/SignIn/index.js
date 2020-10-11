@@ -93,7 +93,11 @@ class SignInFormBase extends Component {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <form className={styles.form} noValidate>
+          <form
+            className={styles.form}
+            noValidate
+            onSubmit={this.onSubmit}
+          >
             <TextField
               variant="outlined"
               margin="normal"

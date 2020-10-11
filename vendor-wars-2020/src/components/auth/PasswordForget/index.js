@@ -75,16 +75,20 @@ class PasswordForgetFormBase extends Component {
           <Typography component="h1" variant="h5">
             Forget Password
           </Typography>
-          <form className={styles.form} noValidate>
+          <form
+            className={styles.form}
+            noValidate
+            onSubmit={this.onSubmit}
+          >
             <TextField
               variant="outlined"
               margin="normal"
               required
               fullWidth
-              id="username"
-              label="Full Name"
-              name="username"
-              autoComplete="username"
+              id="email"
+              label="Email Address"
+              name="email"
+              autoComplete="email"
               autoFocus
               onChange={this.onChange}
               value={this.state.email}

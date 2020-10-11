@@ -35,7 +35,7 @@ function Main(props) {
   const theme = useTheme();
 
   return (
-    <Container component="main" maxWidth="md">
+    <Container component="main" maxWidth="lg">
       <div className={classes.section}>
         <Status />
         <CurrentLoc />

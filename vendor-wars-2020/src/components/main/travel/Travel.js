@@ -1,15 +1,32 @@
 import React, { useState } from 'react';
 
 import { useTheme, makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import LocalTaxiIcon from '@material-ui/icons/LocalTaxi';
 
 const useStyles = makeStyles((theme) => ({
+  buttonPrimary: {
+    color: theme.palette.primary.main,
+    marginBottom: '12px',
+    marginRight: '12px',
+    background: theme.palette.accent.main,
+  },
+  buttonSecondary: {
+    color: theme.palette.secondary.main,
+    marginBottom: '12px',
+    marginRight: '12px',
+    background: theme.palette.accent.main,
+  },
   currentLoc: {
     flex: '1',
   },
+  icon: {
+    marginRight: '5px',
+  },
   travel: {
-    flex: '3',
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
 }));
 
@@ -30,20 +47,71 @@ function Travel(props) {
   const theme = useTheme();
 
   return (
-    <div className={classes.travel}>
-      <div>
-        {' '}
-        <button>Northtown</button>
-        <button>Plaza</button>
-        <button>Downtown</button>
-        <button>Westport</button>
-      </div>
-      <div>
-        {' '}
-        <button>Brookside</button>
-        <button>Martin City</button>
-        <button>Independence</button>
-        <button>JOCO</button>
+    <div style={{ flex: '2' }}>
+      <h2>Travel To</h2>
+      <div className={classes.travel}>
+        <div style={{ flex: '1', paddingTop: '15px' }}>
+          {' '}
+          <Button
+            variant="contained"
+            className={classes.buttonPrimary}
+          >
+            <LocalTaxiIcon className={classes.icon} />
+            Northtown
+          </Button>
+          <Button
+            variant="contained"
+            className={classes.buttonSecondary}
+          >
+            <LocalTaxiIcon className={classes.icon} />
+            Plaza
+          </Button>
+          <Button
+            variant="contained"
+            className={classes.buttonPrimary}
+          >
+            <LocalTaxiIcon className={classes.icon} />
+            Downtown
+          </Button>
+          <Button
+            variant="contained"
+            className={classes.buttonSecondary}
+          >
+            <LocalTaxiIcon className={classes.icon} />
+            Westport
+          </Button>
+        </div>
+        <div style={{ flex: '1', paddingTop: '15px' }}>
+          {' '}
+          <Button
+            variant="contained"
+            className={classes.buttonSecondary}
+          >
+            <LocalTaxiIcon className={classes.icon} />
+            Brookside
+          </Button>
+          <Button
+            variant="contained"
+            className={classes.buttonPrimary}
+          >
+            <LocalTaxiIcon className={classes.icon} />
+            Martin City
+          </Button>
+          <Button
+            variant="contained"
+            className={classes.buttonSecondary}
+          >
+            <LocalTaxiIcon className={classes.icon} />
+            Independence
+          </Button>
+          <Button
+            variant="contained"
+            className={classes.buttonPrimary}
+          >
+            <LocalTaxiIcon className={classes.icon} />
+            JOCO
+          </Button>
+        </div>
       </div>
     </div>
   );

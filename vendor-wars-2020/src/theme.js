@@ -8,7 +8,7 @@ const theme = createMuiTheme({
       main: '#ffecb3',
     },
     accent: {
-      main: '#ff4081',
+      main: '#f8bbd0',
     },
     background: {
       default: '#b2ebf2',

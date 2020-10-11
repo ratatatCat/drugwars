@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing.unit,
     width: '200px',
     color: 'white',
+    background: theme.palette.accent.main,
   },
   icon: {
     width: '100px',
@@ -64,17 +65,13 @@ function HomePage(props) {
           <Button
             variant="contained"
             className={classes.button}
-            color="primary"
+            style={{ background: theme.palette.primary.main }}
           >
             New Game
           </Button>
         </Link>
         <Link to={ROUTES.MAIN} className={classes.link}>
-          <Button
-            variant="contained"
-            className={classes.button}
-            color="accent"
-          >
+          <Button variant="contained" className={classes.button}>
             Continue
           </Button>
         </Link>

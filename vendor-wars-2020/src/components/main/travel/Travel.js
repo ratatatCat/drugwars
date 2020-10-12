@@ -50,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
 function onClick(button, props, src) {
   props.setLocation(button.target.valueOf().innerText);
   props.setSrc(src);
+  props.setDayNum(props.dayNum + 1);
 }
 
 function CurrentLoc(props) {

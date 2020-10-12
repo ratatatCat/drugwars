@@ -30,6 +30,7 @@ function Main(props) {
   const theme = useTheme();
   const [location, setLocation] = useState();
   const [src, setSrc] = useState();
+  const [dayNum, setDayNum] = useState(1);
 
   return (
     <Container
@@ -41,9 +42,14 @@ function Main(props) {
       }}
     >
       <div className={classes.section}>
-        <Status />
+        <Status dayNum={dayNum} />
         <CurrentLoc location={location} src={src} />
-        <Travel setLocation={setLocation} setSrc={setSrc} />
+        <Travel
+          setLocation={setLocation}
+          setSrc={setSrc}
+          dayNum={dayNum}
+          setDayNum={setDayNum}
+        />
       </div>
       <div className={classes.section}>
         <Events />

@@ -26,13 +26,13 @@ function Status(props) {
     <div className={classes.status}>
       <div style={{ flex: '1' }}>
         <p>
-          <b>Day:</b> 1/60
+          <b>Day:</b> {props.dayNum}/60
         </p>
         <p>
-          <b>Cash:</b> 400
+          <b>Cash:</b> 200
         </p>
         <p>
-          <b>Debt:</b> 5000
+          <b>Debt:</b> 0
         </p>
         <p>
           <b>Prestige:</b> 1/100

@@ -88,7 +88,7 @@ function Actions(props) {
             variant="contained"
             className={classes.buttonSecondary}
           >
-            Health
+            Loan
           </Button>
           <Button
             variant="contained"

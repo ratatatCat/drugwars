@@ -16,13 +16,15 @@ function SignOutButton(props) {
   const theme = useTheme();
 
   return (
-    <Button
-      variant="contained"
-      onClick={props.firebase.doSignOut}
-      className={classes.buttonPrimary}
-    >
-      Sign Out
-    </Button>
+    <div style={{ flex: '1' }}>
+      <Button
+        variant="contained"
+        onClick={props.firebase.doSignOut}
+        className={classes.buttonPrimary}
+      >
+        Sign Out
+      </Button>
+    </div>
   );
 }
 

@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
   },
-  signout: {
+  main: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
@@ -39,7 +39,7 @@ function Main(props) {
   const [dayNum, setDayNum] = useState(1);
 
   return (
-    <div className={classes.signout}>
+    <div className={classes.main}>
       <SignOutButton />
       <Container
         component="main"
@@ -47,6 +47,7 @@ function Main(props) {
         style={{
           background: theme.palette.primary.main,
           height: '100vh',
+          margin: 0,
         }}
       >
         <div className={classes.section}>
@@ -68,6 +69,7 @@ function Main(props) {
           <Bag />
         </div>
       </Container>
+      <div style={{ flex: '1' }} />
     </div>
   );
 }

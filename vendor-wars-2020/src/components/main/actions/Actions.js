@@ -1,4 +1,5 @@
 import React from 'react';
+import CalendarModal from '../Calendar/calendar';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -63,12 +64,13 @@ function Actions(props) {
           >
             Sell
           </Button>
-          <Button
+          {/* <Button
             variant="contained"
             className={classes.buttonSecondary}
           >
             Calendar
-          </Button>
+          </Button> */}
+          <CalendarModal />
         </div>
         <div style={{ flex: '1', paddingTop: '15px' }}>
           <Button

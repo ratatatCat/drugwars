@@ -18,67 +18,79 @@ function Knockoffs(props) {
 
   return (
     <div className={classes.knockoffs}>
-      <h2>Sell Prices:</h2>
+      <h2>Buy/Sell Prices:</h2>
       <table className={classes.table}>
         <tbody>
           <tr>
             <th />
             <th style={{ textAlign: 'left' }}>Item</th>
+            <th style={{ textAlign: 'left' }}>Qty</th>
             <th style={{ textAlign: 'left' }}>Price</th>
           </tr>
           <tr>
             <td></td>
             <td>Joakley Sunglasses</td>
+            <td>5</td>
             <td>$15</td>
           </tr>
           <tr>
             <td></td>
             <td>Chiefs Tickets - Upper Section</td>
+            <td>3</td>
             <td>$75</td>
           </tr>
           <tr>
             <td></td>
             <td>Chiefs Tickets - Lower Section</td>
+            <td>5</td>
             <td>$200</td>
           </tr>
           <tr>
             <td></td>
             <td>Concert T-Shirts</td>
+            <td>10</td>
             <td>$15</td>
           </tr>
           <tr>
             <td></td>
             <td>Water</td>
+            <td>20</td>
             <td>$5</td>
           </tr>
           <tr>
             <td></td>
             <td>Event Parking</td>
+            <td>30</td>
             <td>$20</td>
           </tr>
           <tr>
             <td></td>
             <td>Local Event Tickets</td>
+            <td>5</td>
             <td>$20</td>
           </tr>
           <tr>
             <td></td>
             <td>Louie Vuitton Replica</td>
+            <td>3</td>
             <td>$20</td>
           </tr>
           <tr>
             <td></td>
             <td>Fake Rolex</td>
+            <td>2</td>
             <td>$50</td>
           </tr>
           <tr>
             <td></td>
             <td>Luxury Sneakers</td>
+            <td>5</td>
             <td>$50</td>
           </tr>
           <tr>
             <td></td>
             <td>Replica Rayban</td>
+            <td>5</td>
             <td>$30</td>
           </tr>
         </tbody>

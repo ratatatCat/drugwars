@@ -2,11 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Redirect } from 'react-router';
 
-import SignUpPage from '../auth/SignUp';
-import SignInPage from '../auth/SignIn';
-import PasswordForgetPage from '../auth/PasswordForget';
+import SignUpPage from '../Auth/SignUp';
+import SignInPage from '../Auth/SignIn';
+import PasswordForgetPage from '../Auth/PasswordForget';
 import Main from '../Main/main';
-import { withAuthentication, AuthUserContext } from '../auth/Session';
+import { withAuthentication, AuthUserContext } from '../Auth/Session';
 
 import * as ROUTES from '../../constants/routes';
 

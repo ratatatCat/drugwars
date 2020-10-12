@@ -6,7 +6,7 @@ import Events from './Events/events';
 import Knockoffs from './Knockoffs/knockoffs';
 import Actions from './Actions/actions';
 import Bag from './Bag/bag';
-import SignOutButton from '../auth/SignOut';
+import SignOutButton from '../Auth/SignOut';
 
 import Container from '@material-ui/core/Container';
 import { useTheme, makeStyles } from '@material-ui/core/styles';

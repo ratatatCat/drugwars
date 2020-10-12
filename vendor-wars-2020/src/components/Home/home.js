@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
 
 import { compose } from 'recompose';
-import { withAuthorization } from '../auth/Session';
+import { withAuthorization } from '../Auth/Session';
 
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';

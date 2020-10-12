@@ -67,7 +67,7 @@ function Actions(props) {
             variant="contained"
             className={classes.buttonSecondary}
           >
-            Price History
+            Calendar
           </Button>
         </div>
         <div style={{ flex: '1', paddingTop: '15px' }}>
@@ -93,7 +93,7 @@ function Actions(props) {
             variant="contained"
             className={classes.buttonPrimary}
           >
-            New Game
+            Use Item
           </Button>
         </div>
       </div>

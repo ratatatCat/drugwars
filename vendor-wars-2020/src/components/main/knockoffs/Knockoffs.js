@@ -27,7 +27,7 @@ function Knockoffs(props) {
         <TableHead>
           <TableRow>
             <TableCell />
-            <TableCell style={{ width: '200px' }}>Item</TableCell>
+            <TableCell style={{ width: '250px' }}>Item</TableCell>
             <TableCell>Qty</TableCell>
             <TableCell>Price</TableCell>
           </TableRow>

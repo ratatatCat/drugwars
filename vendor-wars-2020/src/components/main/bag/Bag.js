@@ -1,41 +1,49 @@
-import React, { useState } from "react";
-import "./Bag.css";
+import React, { useState } from 'react';
 
-function Bag() {
+import { useTheme, makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  bag: {
+    flex: 1,
+  },
+  table: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+}));
+
+function Bag(props) {
+  const classes = useStyles(props);
+  const theme = useTheme();
+
   return (
-    <div className="Bag">
-      <h3>Trenchcoat space: 0/100</h3>
-      <table>
+    <div className={classes.bag}>
+      <h2>Bag Space: 75/100</h2>
+      <table className={classes.table}>
         <tbody>
           <tr>
-            <th>Item</th>
-            <th>Qty</th>
-            <th>Price</th>
+            <th style={{ textAlign: 'left' }}>Item</th>
+            <th style={{ textAlign: 'left' }}>Qty</th>
           </tr>
           <tr>
-            <td>Acid</td>
-            <td>40</td>
-            <td>1,032</td>
+            <td>Concert T-Shirts</td>
+            <td>30</td>
           </tr>
           <tr>
-            <td>Cocaine</td>
-            <td>40</td>
-            <td>1,032</td>
+            <td>Event Parking</td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>Crack</td>
-            <td>40</td>
-            <td>1,032</td>
+            <td>Water</td>
+            <td>20</td>
           </tr>
           <tr>
-            <td>Ecstasy</td>
-            <td>40</td>
-            <td>1,032</td>
+            <td>Fake Rolex</td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>Heroin</td>
-            <td>40</td>
-            <td>1,032</td>
+            <td>Replica Rayban</td>
+            <td>5</td>
           </tr>
         </tbody>
       </table>

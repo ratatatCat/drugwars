@@ -1,9 +1,0 @@
-.Actions {
-  display: flex;
-  flex-direction: column;
-}
-
-button {
-  width: 200px;
-  height: 30px;
-}

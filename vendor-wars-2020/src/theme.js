@@ -4,14 +4,20 @@ const theme = createMuiTheme({
     primary: {
       main: '#4dd0e1',
     },
+    primary2: {
+      main: '#b2ebf2',
+    },
     secondary: {
       main: '#ffecb3',
     },
     accent: {
-      main: '#f8bbd0',
+      main: '#ff80ab',
+    },
+    accent2: {
+      main: '#3f51b5',
     },
     background: {
-      default: '#b2ebf2',
+      default: 'rgba(0, 151, 167, 0.95)',
     },
   },
   overrides: {

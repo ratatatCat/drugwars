@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     marginBottom: '12px',
     marginRight: '12px',
-    background: theme.palette.accent.main,
+    background: theme.palette.accent2.main,
   },
   buttonSecondary: {
     color: theme.palette.secondary.main,
@@ -74,7 +74,7 @@ function Travel(props) {
   const theme = useTheme();
 
   return (
-    <div style={{ flex: '2' }}>
+    <div style={{ flex: '1' }}>
       <h2>Travel To</h2>
       <div className={classes.travel}>
         <div style={{ flex: '1', paddingTop: '15px' }}>

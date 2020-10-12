@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import Status from './Status/status';
 import { Travel, CurrentLoc } from './Travel/travel';
 import Events from './Events/events';
-import Knockoffs from './knockoffs/Knockoffs';
-import Actions from './actions/Actions';
-import Bag from './bag/Bag';
+import Knockoffs from './Knockoffs/knockoffs';
+import Actions from './Actions/actions';
+import Bag from './Bag/bag';
 
 import Container from '@material-ui/core/Container';
 import { useTheme, makeStyles } from '@material-ui/core/styles';
@@ -32,7 +32,14 @@ function Main(props) {
   const [src, setSrc] = useState();
 
   return (
-    <Container component="main" maxWidth="lg">
+    <Container
+      component="main"
+      maxWidth="lg"
+      style={{
+        background: theme.palette.primary.main,
+        height: '100vh',
+      }}
+    >
       <div className={classes.section}>
         <Status />
         <CurrentLoc location={location} src={src} />
@@ -41,7 +48,7 @@ function Main(props) {
       <div className={classes.section}>
         <Events />
       </div>
-      <div>
+      <div className={classes.section}>
         <Knockoffs />
         <Actions />
         <Bag />

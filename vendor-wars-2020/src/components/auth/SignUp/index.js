@@ -4,7 +4,6 @@ import { compose } from 'recompose';
 
 import { withFirebase } from '../../Firebase';
 import * as ROUTES from '../../../constants/routes';
-import * as ROLES from '../../../constants/roles';
 
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -39,7 +38,6 @@ const INITIAL_STATE = {
   email: '',
   passwordOne: '',
   passwordTwo: '',
-  isAdmin: false,
   error: null,
 };
 
@@ -61,12 +59,7 @@ class SignUpFormBase extends Component {
   }
 
   onSubmit = (event) => {
-    const { username, email, passwordOne, isAdmin } = this.state;
-    const roles = {};
-
-    if (isAdmin) {
-      roles[ROLES.ADMIN] = ROLES.ADMIN;
-    }
+    const { username, email, passwordOne } = this.state;
 
     this.props.firebase
       .doCreateUserWithEmailAndPassword(email, passwordOne)
@@ -75,7 +68,6 @@ class SignUpFormBase extends Component {
         return this.props.firebase.user(authUser.user.uid).set({
           username,
           email,
-          roles,
         });
       })
       .then(() => {
@@ -110,7 +102,6 @@ class SignUpFormBase extends Component {
       email,
       passwordOne,
       passwordTwo,
-      isAdmin,
       error,
     } = this.state;
 
@@ -189,7 +180,6 @@ class SignUpFormBase extends Component {
               className={styles.submit}
               disabled={isInvalid}
               fullWidth
-              type="submit"
             >
               {' '}
               Sign Up

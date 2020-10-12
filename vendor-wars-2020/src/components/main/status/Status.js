@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useTheme, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 import SunnyDay from '../../../images/sunnyday.jpg';
 
@@ -20,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
 
 function Status(props) {
   const classes = useStyles(props);
-  const theme = useTheme();
 
   return (
     <div className={classes.status}>

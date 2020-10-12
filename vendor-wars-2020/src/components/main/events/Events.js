@@ -1,7 +1,7 @@
 import React from 'react';
 import Ticker from 'react-ticker';
 
-import { useTheme, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   events: {
@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
 
 function Events(props) {
   const classes = useStyles(props);
-  const theme = useTheme();
 
   return (
     <div className={classes.events}>

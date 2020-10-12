@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { useTheme, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   table: {
@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
 
 function Knockoffs(props) {
   const classes = useStyles(props);
-  const theme = useTheme();
 
   return (
     <div className={classes.knockoffs}>

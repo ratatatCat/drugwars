@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { useTheme, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import LocalTaxiIcon from '@material-ui/icons/LocalTaxi';
 
@@ -55,7 +55,6 @@ function onClick(button, props, src) {
 
 function CurrentLoc(props) {
   const classes = useStyles(props);
-  const theme = useTheme();
 
   return (
     <div className={classes.currentLoc}>
@@ -72,7 +71,6 @@ function CurrentLoc(props) {
 
 function Travel(props) {
   const classes = useStyles(props);
-  const theme = useTheme();
 
   return (
     <div style={{ flex: '1' }}>

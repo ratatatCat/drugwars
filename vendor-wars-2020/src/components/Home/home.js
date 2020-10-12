@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import './home.css';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
 
@@ -55,6 +54,7 @@ function HomePage(props) {
         <img
           src={VendorMan}
           color="primary"
+          alt="Street Vendor"
           height={100}
           width={100}
         />

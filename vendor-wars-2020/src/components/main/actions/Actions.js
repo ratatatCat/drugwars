@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { useTheme, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
@@ -39,7 +39,6 @@ const useStyles = makeStyles((theme) => ({
 
 function Actions(props) {
   const classes = useStyles(props);
-  const theme = useTheme();
 
   return (
     <div style={{ flex: '1' }}>

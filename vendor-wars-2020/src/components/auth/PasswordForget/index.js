@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { withFirebase } from '../../Firebase';
-import { withRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import * as ROUTES from '../../../constants/routes';
 
 import Button from '@material-ui/core/Button';
@@ -100,7 +100,6 @@ class PasswordForgetFormBase extends Component {
               className={styles.submit}
               disabled={isInvalid}
               fullWidth
-              type="submit"
             >
               {' '}
               Reset My Password

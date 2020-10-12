@@ -22,7 +22,7 @@ function Events(props) {
         {() => (
           <>
             <p>
-              Saturday, October 4, 2020: Chiefs game today! There will
+              Sunday, October 4, 2020: Chiefs game today! There will
               be more cops on the streets and tickets will sell for
               more.
             </p>

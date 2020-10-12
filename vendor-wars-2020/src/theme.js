@@ -27,6 +27,10 @@ const theme = createMuiTheme({
         // Some CSS
         color: 'white',
       },
+      contained: {
+        width: '200px',
+        height: '30px',
+      },
     },
   },
 });

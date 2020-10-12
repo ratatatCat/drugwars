@@ -6,6 +6,7 @@ import Events from './Events/events';
 import Knockoffs from './Knockoffs/knockoffs';
 import Actions from './Actions/actions';
 import Bag from './Bag/bag';
+import SignOutButton from '../auth/SignOut';
 
 import Container from '@material-ui/core/Container';
 import { useTheme, makeStyles } from '@material-ui/core/styles';
@@ -23,6 +24,11 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
   },
+  signout: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
 }));
 
 function Main(props) {
@@ -33,33 +39,36 @@ function Main(props) {
   const [dayNum, setDayNum] = useState(1);
 
   return (
-    <Container
-      component="main"
-      maxWidth="lg"
-      style={{
-        background: theme.palette.primary.main,
-        height: '100vh',
-      }}
-    >
-      <div className={classes.section}>
-        <Status dayNum={dayNum} />
-        <CurrentLoc location={location} src={src} />
-        <Travel
-          setLocation={setLocation}
-          setSrc={setSrc}
-          dayNum={dayNum}
-          setDayNum={setDayNum}
-        />
-      </div>
-      <div className={classes.section}>
-        <Events />
-      </div>
-      <div className={classes.section}>
-        <Knockoffs />
-        <Actions />
-        <Bag />
-      </div>
-    </Container>
+    <div className={classes.signout}>
+      <SignOutButton />
+      <Container
+        component="main"
+        maxWidth="lg"
+        style={{
+          background: theme.palette.primary.main,
+          height: '100vh',
+        }}
+      >
+        <div className={classes.section}>
+          <Status dayNum={dayNum} />
+          <CurrentLoc location={location} src={src} />
+          <Travel
+            setLocation={setLocation}
+            setSrc={setSrc}
+            dayNum={dayNum}
+            setDayNum={setDayNum}
+          />
+        </div>
+        <div className={classes.section}>
+          <Events />
+        </div>
+        <div className={classes.section}>
+          <Knockoffs />
+          <Actions />
+          <Bag />
+        </div>
+      </Container>
+    </div>
   );
 }
 

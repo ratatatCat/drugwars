@@ -1,11 +1,29 @@
 import React from 'react';
-
 import { withFirebase } from '../../Firebase';
 
-const SignOutButton = ({ firebase }) => (
-  <button type="button" onClick={firebase.doSignOut}>
-    Sign Out
-  </button>
-);
+import Button from '@material-ui/core/Button';
+import { useTheme, makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  buttonPrimary: {
+    margin: '12px',
+    background: theme.palette.primary.main,
+  },
+}));
+
+function SignOutButton(props) {
+  const classes = useStyles(props);
+  const theme = useTheme();
+
+  return (
+    <Button
+      variant="contained"
+      onClick={props.firebase.doSignOut}
+      className={classes.buttonPrimary}
+    >
+      Sign Out
+    </Button>
+  );
+}
 
 export default withFirebase(SignOutButton);

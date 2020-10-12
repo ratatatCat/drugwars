@@ -7,11 +7,8 @@ import SignInPage from '../auth/SignIn';
 import PasswordForgetPage from '../auth/PasswordForget';
 import Main from '../Main/main';
 import { withAuthentication, AuthUserContext } from '../auth/Session';
-import { Link } from 'react-router-dom';
 
-import SignOutButton from '../auth/SignOut';
 import * as ROUTES from '../../constants/routes';
-import * as ROLES from '../../constants/roles';
 
 import HomePage from '../Home/home';
 

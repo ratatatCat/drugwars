@@ -15,7 +15,7 @@ import { useTheme, makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   button: {
-    margin: theme.spacing.unit,
+    margin: theme.spacing(),
     width: '200px',
     color: 'white',
     background: theme.palette.accent.main,

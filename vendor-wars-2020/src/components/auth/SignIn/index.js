@@ -16,7 +16,7 @@ import Container from '@material-ui/core/Container';
 
 const styles = (theme) => ({
   button: {
-    margin: theme.spacing.unit,
+    margin: theme.spacing(),
   },
   paper: {
     marginTop: theme.spacing(8),

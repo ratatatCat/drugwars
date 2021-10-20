@@ -15,7 +15,19 @@ const useStyles = makeStyles((theme) => ({
   knockoffs: {
     flex: 1,
   },
+  tableRow: {
+    '&:hover': {
+      background: 'rgba(0, 151, 167, 0.95)',
+    },
+  },
+  selected: {
+    background: 'rgba(0, 151, 167, 0.95)',
+  },
 }));
+
+function onClick(row) {
+// TODO
+}
 
 function Knockoffs(props) {
   const classes = useStyles(props);
@@ -33,67 +45,100 @@ function Knockoffs(props) {
           </TableRow>
         </TableHead>
         <TableBody>
-          <TableRow>
+          <TableRow
+            onClick={() => onClick()}
+            className={classes.tableRow}
+          >
             <TableCell></TableCell>
             <TableCell>Joakley Sunglasses</TableCell>
             <TableCell>5</TableCell>
             <TableCell>$15</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow
+            onClick={() => onClick()}
+            className={classes.tableRow}
+          >
             <TableCell></TableCell>
             <TableCell>Chiefs Tickets - Upper Section</TableCell>
             <TableCell>3</TableCell>
             <TableCell>$75</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow
+            onClick={() => onClick()}
+            className={classes.tableRow}
+          >
             <TableCell></TableCell>
             <TableCell>Chiefs Tickets - Lower Section</TableCell>
             <TableCell>5</TableCell>
             <TableCell>$200</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow
+            onClick={() => onClick()}
+            className={classes.tableRow}
+          >
             <TableCell></TableCell>
             <TableCell>Concert T-Shirts</TableCell>
             <TableCell>10</TableCell>
             <TableCell>$15</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow
+            onClick={() => onClick()}
+            className={classes.tableRow}
+          >
             <TableCell></TableCell>
             <TableCell>Water</TableCell>
             <TableCell>20</TableCell>
             <TableCell>$5</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow
+            onClick={() => onClick()}
+            className={classes.tableRow}
+          >
             <TableCell></TableCell>
             <TableCell>Event Parking</TableCell>
             <TableCell>30</TableCell>
             <TableCell>$20</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow
+            onClick={() => onClick()}
+            className={classes.tableRow}
+          >
             <TableCell></TableCell>
             <TableCell>Local Event Tickets</TableCell>
             <TableCell>5</TableCell>
             <TableCell>$20</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow
+            onClick={() => onClick()}
+            className={classes.tableRow}
+          >
             <TableCell></TableCell>
             <TableCell>Louie Vuitton Replica</TableCell>
             <TableCell>3</TableCell>
             <TableCell>$20</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow
+            onClick={() => onClick()}
+            className={classes.tableRow}
+          >
             <TableCell></TableCell>
             <TableCell>Fake Rolex</TableCell>
             <TableCell>2</TableCell>
             <TableCell>$50</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow
+            onClick={() => onClick()}
+            className={classes.tableRow}
+          >
             <TableCell></TableCell>
             <TableCell>Luxury Sneakers</TableCell>
             <TableCell>5</TableCell>
             <TableCell>$50</TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow
+            onClick={() => onClick()}
+            className={classes.tableRow}
+          >
             <TableCell></TableCell>
             <TableCell>Replica Rayban</TableCell>
             <TableCell>5</TableCell>

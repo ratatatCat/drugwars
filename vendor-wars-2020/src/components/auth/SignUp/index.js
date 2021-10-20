@@ -13,7 +13,7 @@ import Container from '@material-ui/core/Container';
 
 const styles = (theme) => ({
   button: {
-    margin: theme.spacing.unit,
+    margin: theme.spacing(),
   },
   paper: {
     marginTop: theme.spacing(8),
@@ -90,10 +90,6 @@ class SignUpFormBase extends Component {
 
   onChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
-  };
-
-  onChangeCheckbox = (event) => {
-    this.setState({ [event.target.name]: event.target.checked });
   };
 
   render() {
